@@ -7,7 +7,7 @@
 <sup>1</sup>KAIST &nbsp;&nbsp; <sup>2</sup>Georgia Institute of Technology<br>
 <sup>†</sup>Equal advising
 
-[[Project Page]](https://bw-park.github.io/LongTake/) | [[Paper (arXiv:2609.38562)]](https://arxiv.org/abs/2609.38562)
+[[Project Page]](https://bw-park.github.io/LongTake/) | [[Paper]](https://arxiv.org/abs/2609.38562)
 
 **Code coming soon.**
 
