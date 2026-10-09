@@ -1,0 +1,88 @@
+/* Only palette and typography: LongTake's original layout lives in style.css. */
+@font-face {
+  font-family: 'Roboto';
+  src: url('assets/fonts/roboto-latin.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  --paper: #fff;
+  --ink: #1c1c1d;
+  --muted: #636367;
+  --purple: #4e2a96;
+  --purple-dark: #4e2a96;
+  --line: #dedee0;
+  --surface: #f6f5f8;
+  --accent-tint: #efebf6;
+  --on-accent: #fff;
+  --accent-hover: #3e2178;
+  --error: #9a2940;
+  --mono: 'Roboto', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --paper: #1c1c1d;
+  --ink: #e8e8e8;
+  --muted: #b1b1b7;
+  --purple: #b499e5;
+  --purple-dark: #b499e5;
+  --line: #414144;
+  --surface: #242426;
+  --accent-tint: #332941;
+  --on-accent: #1c1c1d;
+  --accent-hover: #c3aceb;
+  --error: #f18da0;
+  color-scheme: dark;
+}
+
+body { font-weight: 300; }
+strong { font-weight: 500; }
+h1, h2 { font-weight: 300; }
+h3, h4, .button, .eyebrow { font-weight: 400; }
+.authors a { color: var(--purple); }
+.authors a:hover { text-decoration: underline; }
+.authors sup, .affiliation sup { color: var(--muted); }
+.site-header { background: var(--paper); }
+.mark { background: var(--purple); color: var(--on-accent); }
+.mark span { color: inherit; }
+.hero-summary { color: var(--muted); }
+.skip-link { background: var(--paper); color: var(--purple); }
+.inline-status button { color: #1c1c1d; }
+#comparison-status, #teacher-status, #lambda-status { color: var(--error); }
+
+.button { background: var(--paper); color: var(--ink); }
+.button.primary { background: var(--purple); color: var(--on-accent); border-color: var(--purple); }
+.button.primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+.resource-button:disabled { color: var(--muted); border-color: var(--line); }
+.resource-status { background: var(--accent-tint); color: var(--purple); }
+[data-theme='dark'] .affiliation img { filter: brightness(0) invert(1); }
+.longtake-stages .step-number, .longtake-stages article:first-child .step-number { color: var(--purple); }
+.comparison-shell, .ablation { background: var(--paper); border-color: var(--line); }
+.comparison-tabs { border-color: var(--line); }
+.comparison-tabs button { color: var(--muted); }
+.comparison-tabs button[aria-selected='true'] { color: var(--purple); border-color: var(--purple); }
+.comparison-cell h4, .teacher-cell h4, .lambda-cell h4 { color: var(--ink); }
+.comparison-cell.ours, .teacher-cell.ours { background: var(--accent-tint); border-color: var(--purple); }
+.teacher-cell { border-color: var(--line); }
+.teacher-cell[data-method='cd'] { border-color: var(--muted); }
+.teacher-chart { background: #fff; }
+.comparison-timeline { color: var(--muted); }
+input[type='range'] { accent-color: var(--purple); }
+.segmented { background: var(--surface); }
+.segmented button { color: var(--muted); }
+.segmented button[aria-selected='true'] { background: var(--paper); color: var(--purple); }
+.segmented span { color: inherit; }
+.video-group-speed > .playback-speed, .lambda-cell > .playback-speed, #lambda-speed-all > .playback-speed, .teacher-cell > .playback-speed, #teacher-speed-all > .playback-speed { background: var(--surface); border-color: var(--line); }
+.video-group-speed .playback-speed button, .lambda-cell .playback-speed button, #lambda-speed-all .playback-speed button, .teacher-cell .playback-speed button, #teacher-speed-all .playback-speed button { color: var(--muted); }
+.video-group-speed .playback-speed button[aria-pressed='true'], .lambda-cell .playback-speed button[aria-pressed='true'], #lambda-speed-all .playback-speed button[aria-pressed='true'], .teacher-cell .playback-speed button[aria-pressed='true'], #teacher-speed-all .playback-speed button[aria-pressed='true'] { background: var(--accent-tint); color: var(--purple); }
+
+/* The optional color-theme control does not alter the original page sections. */
+.theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; flex: none; padding: 0; border: 0; background: transparent; color: var(--ink); }
+.theme-toggle[hidden], .theme-sun { display: none; }
+.theme-toggle:hover { color: var(--purple); }
+[data-theme='dark'] .theme-sun { display: block; }
+[data-theme='dark'] .theme-moon { display: none; }
